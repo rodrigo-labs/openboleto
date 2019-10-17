@@ -67,7 +67,7 @@ class Unicred extends BoletoAbstract
     protected function gerarNossoNumero()
     {
         $numero = self::zeroFill($this->getSequencial(), 10);
-        $dv = $this->modulo11($numero,7);
+        $dv = $this->modulo11($numero, 7);
         $numero .= '-' . $dv['digito'];
 
         return $numero;
@@ -91,6 +91,9 @@ class Unicred extends BoletoAbstract
      */
     public function getAgenciaCodigoCedente()
     {
-        return static::zeroFill($this->getAgencia(), 4) . ' / ' . static::zeroFill($this->getConta(), 10);
+        $agencia = $this->getAgencia();
+        $conta = $this->getConta() . '-' . $this->getContaDv();
+
+        return static::zeroFill($agencia, 4) . ' / ' . static::zeroFill($conta, 10);
     }
 }

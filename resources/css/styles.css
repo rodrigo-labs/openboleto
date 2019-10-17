@@ -23,11 +23,11 @@
 
 @media print {
     .noprint {
-        display:none;
+        display: none;
     }
 }
 
-body{
+body {
     background-color: #ffffff;
     margin-right: 0;
 }
@@ -61,7 +61,8 @@ body{
 
 .table-boleto .conteudo {
     font: bold 10px Arial;
-    height: 11.5px;
+    min-height: 11.5px;
+    max-height: 16.5px;
 }
 
 .table-boleto .sacador {
@@ -118,7 +119,6 @@ body{
     display: inline;
     border-left: 2px solid #000;
     border-right: 2px solid #000;
-    width: 51px;
     margin-left: 25px;
 }
 
@@ -187,15 +187,37 @@ body{
     width: 3px;
 }
 
-.float_left{
-    float:left;
+.float_left {
+    float: left;
 }
 
 .center {
     text-align: center;
 }
 
-.conteudo.cpf_cnpj{
-    float:right;
-    width:24%;
+.conteudo-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-color {
+    font: bold 10px Arial;
+}
+
+.td-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.mr-5 {
+    margin-right: 110px;
+}
+
+.mb-1 {
+    margin-bottom: 2px;
+}
+
+.colar-embaixo {
+    justify-self: flex-end;
 }

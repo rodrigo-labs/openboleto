@@ -249,7 +249,7 @@ abstract class BoletoAbstract
      * Linha de local de pagamento
      * @var string
      */
-    protected $localPagamento = 'Pagável em qualquer agência bancária até o vencimento.';
+    protected $localPagamento = 'Pagável em qualquer banco.';
 
     /**
      * Array com as linhas de instruções
@@ -1296,12 +1296,12 @@ abstract class BoletoAbstract
      *
      * @return string
      */
-    public function getAgenciaCodigoCedente()
-    {
-        $agencia = $this->getAgenciaDv() !== null ? $this->getAgencia() . '-' . $this->getAgenciaDv() : $this->getAgencia();
-        $conta = $this->getContaDv() !== null ? $this->getConta() . '-' . $this->getContaDv() : $this->getConta();
-        return $agencia . ' / ' . $conta;
-    }
+    public abstract function getAgenciaCodigoCedente();
+    // {
+    //     $agencia = $this->getAgenciaDv() !== null ? $this->getAgencia() . '-' . $this->getAgenciaDv() : $this->getAgencia();
+    //     $conta = $this->getContaDv() !== null ? $this->getConta() . '-' . $this->getContaDv() : $this->getConta();
+    //     return $agencia . ' / ' . $conta;
+    // }
 
     /**
      * Retorna o nome da carteira para impressão no boleto
@@ -1532,7 +1532,6 @@ abstract class BoletoAbstract
      */
     protected static function zeroFill($valor, $digitos)
     {
-        // TODO: Retirar isso daqui, e criar um método para validar os dados
         if (strlen($valor) > $digitos) {
             throw new Exception("O valor {$valor} possui mais de {$digitos} dígitos!");
         }

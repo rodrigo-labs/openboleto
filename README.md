@@ -1,14 +1,11 @@
 
-# OpenBoleto [![Stories in Ready](http://badge.waffle.io/fredroo/openboleto.png)](http://waffle.io/fredroo/openboleto) [![Build Status](https://travis-ci.org/fredroo/openboleto.png)](https://travis-ci.org/fredroo/openboleto)
-
-
+# OpenBoleto
 
 O OpenBoleto é uma biblioteca de código aberto para geração de boletos bancários, um meio de pagamento muito comum no Brasil. O foco é ser simples e ter uma arquitetura compatível com os recursos mais modernos do PHP.
 
+Eu homologuei para o Unicred.
+
 ## Ajude o Projeto a continuar, faça uma doação!
-
-
-[![Pague com PagSeguro - é rápido, grátis e seguro!](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif)](https://pag.ae/7UaL6CCHQ)
 
 ## Instalação
 ### Composer
